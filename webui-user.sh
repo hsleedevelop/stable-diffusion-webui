@@ -12,6 +12,8 @@
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
 #export COMMANDLINE_ARGS=""
 
+export COMMANDLINE_ARGS="--skip-torch-cuda-test --upcast-sampling --no-half-vae --use-cpu interrogate"
+# set COMMANDLINE_ARGS= --opt-channelslast --always-batch-cond-uncond --upcast-sampling --opt-sub-quad-attention
 # python3 executable
 #python_cmd="python3"
 
@@ -26,6 +28,7 @@
 
 # install command for torch
 #export TORCH_COMMAND="pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113"
+export TORCH_COMMAND="pip install --pre torch==2.2.0.dev20231022 torchvision==0.17.0.dev20231022 --index-url https://download.pytorch.org/whl/nightly/cpu"
 
 # Requirements file to use for stable-diffusion-webui
 #export REQS_FILE="requirements_versions.txt"
